@@ -1,0 +1,13 @@
+RailsPandoc
+===========
+
+bridge to use pandoc as a converter for markdown to various output formats.
+
+
+Example
+=======
+
+Example goes here.
+
+
+Copyright (c) 2008 [jhedtrich@gmail.com], released under the MIT license
