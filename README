@@ -8,7 +8,6 @@ This is just a very basic interface, which doesn't support flexible options pass
 
 It basically only supports markdown to (html or latex) fragment conversion.
 
-
 Example
 =======
 
