@@ -3,11 +3,23 @@ RailsPandoc
 
 bridge to use pandoc as a converter for markdown to various output formats.
 
+See http://johnmacfarlane.net/pandoc/README.html for more details about pandoc.
+This is just a very basic interface, which doesn't support flexible options passing, etc.
+
+It basically only supports markdown to (html or latex) fragment conversion.
+
 
 Example
 =======
 
-Example goes here.
+markdown = "* a\n* list"
 
+To convert some markdown into html use:
+pandoc_to_html(markdown)
+or the short alias: pan2h
+
+To convert it to latex use:
+pandoc_to_latex(markdown)
+or the short alias: pan2l
 
 Copyright (c) 2008 [jhedtrich@gmail.com], released under the MIT license
