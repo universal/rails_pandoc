@@ -2,7 +2,7 @@ require 'open3'
 
 class Pandoc
   cattr_accessor :executable
-  self.executable= "pandoc"
+  self.executable= "pandoc" unless self.executable
   
   def self.convert(source, options= "--from=markdown --to=html")
     result = ""
@@ -17,5 +17,3 @@ class Pandoc
     result
   end
 end
-
-
