@@ -23,5 +23,14 @@ class PandocTest < Test::Unit::TestCase
     expected = %Q|<p\n><a href="example.com"><!-- unsafe HTML removed -->alert('hello there');<!-- unsafe HTML removed -->here.</a></p\n>\n|
     assert_equal expected, Pandoc.convert(input)
   end
+  
+  def test_should_have_class_attribute_for_executable
+    assert_respond_to Pandoc, :executable
+    assert_respond_to Pandoc, :executable=
+  end
+  
+  def test_executable_should_be_pandoc_by_default
+    assert_equal "pandoc", Pandoc.executable
+  end
 
 end
