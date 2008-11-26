@@ -36,4 +36,8 @@ class PandocHelperTest < ActionView::TestCase
     assert_equal pan2h(markdown), pandoc_to_html(markdown)
   end
   
+  def test_pandoc_to_latex_should_replace_external_image_links_with_an_url
+    markdown = "![Example](http://www.example.com/example.png)"
+    assert_equal "\\href{http://www.example.com/example.png}{REPLACED IMAGE}\n\n", pan2l(markdown)
+  end
 end

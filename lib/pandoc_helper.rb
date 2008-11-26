@@ -9,7 +9,7 @@ module PandocHelper
   end
   
   def pandoc_to_latex(source, input_format="markdown")
-    pandoc(source, "latex", input_format)
+    pandoc(source, "latex", input_format).gsub(/includegraphics\{(https{0,1}:\/\/.*)\}/i, 'href{\1}{REPLACED IMAGE}')
   end
   
   alias_method :pan2h, :pandoc_to_html

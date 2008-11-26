@@ -1,5 +1,6 @@
 require 'test/unit'
-require 'test_helper'
+require File.dirname(__FILE__) + '/test_helper.rb'
+
 class PandocTest < Test::Unit::TestCase
   # Replace this with your real tests.
   def test_class_should_respond_to_convert
