@@ -33,5 +33,13 @@ class PandocTest < Test::Unit::TestCase
   def test_executable_should_be_pandoc_by_default
     assert_equal "pandoc", Pandoc.executable
   end
+  
+  def test_should_return_error_text_if_no_valid_pandoc_executable_is_set
+    expected = "Sorry, pandoc couldn't be found!"
+    Pandoc.executable="does_not_exist"
+    assert_equal expected, Pandoc.convert("doesn't matter")
+    Pandoc.executable="pandoc"
+    
+  end
 
 end
