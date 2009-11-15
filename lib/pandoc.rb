@@ -1,5 +1,3 @@
-require 'open3'
-
 class Pandoc
   cattr_accessor :executable, :valid_executable
   def self.executable=(executable)
