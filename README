@@ -21,4 +21,4 @@ To convert it to latex use:
 pandoc_to_latex(markdown)
 or the short alias: pan2l
 
-Copyright (c) 2008 [jhedtrich@gmail.com], released under the MIT license
+Copyright (c) 2012 [jhedtrich@gmail.com], released under the MIT license

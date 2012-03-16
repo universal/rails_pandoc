@@ -2,6 +2,7 @@
 require 'tempfile'
 require 'ftools'
 require 'open3'
+require 'timeout'
 # RailsPandoc
 require 'pandoc'
 require 'pandoc_helper'

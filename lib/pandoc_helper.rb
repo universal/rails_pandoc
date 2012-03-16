@@ -1,7 +1,12 @@
 module PandocHelper
   protected
   def pandoc(source, output_format="html", input_format="markdown")
-    Pandoc.convert(source, "--from=#{input_format} --to=#{output_format}")
+    result = Pandoc.convert4(source, "--from=#{input_format} --to=#{output_format}")
+    if output_format == "html"
+      Pandoc.sanitize(result)
+    else
+      result
+    end
   end
   
   def pandoc_to_html(source, input_format="markdown")
