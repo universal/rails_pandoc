@@ -1,7 +1,0 @@
-
-Git Master
-
-  * Added RSpec support [Adam Meehan]
-  * Added path_to_classname so that failed tests that pass run the suite again. [Ken Collins]
-
-
