@@ -12,7 +12,7 @@ describe RailsPandoc::Pandoc do
   end
 
   it "should return error as result when unknown writer" do
-    expected = "pandoc: spawn error\n"
+    expected = "pandoc: Unknown writer: unknownwriter\n"
     result = RailsPandoc::Pandoc.convert("* a\n* b", "--from=markdown --to=unknownwriter")
     result.should == expected
   end

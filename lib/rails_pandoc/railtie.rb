@@ -5,9 +5,8 @@ module RailsPandoc
       ActiveSupport.on_load :action_view do
         include RailsPandoc::PandocHelper
       end
-      #ActionView::Base.send :include, RailsPandoc::PandocHelper
-      # set paths...
-      # include....
+      RailsPandoc::Config.executable = app.config.rails_pandoc.executable if app.config.rails_pandoc.executable
+      RailsPandoc::Config.sanitize_executable = app.config.rails_pandoc.sanitize_executable if app.config.rails_pandoc.sanitize_executable
     end
   end
 end

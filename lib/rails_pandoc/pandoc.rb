@@ -6,10 +6,8 @@ module RailsPandoc
         begin
           cmd = "#{Config.executable} #{options} --mathjax"
           stdout, stderr = "", ""
-          Open4.spawn cmd, 'stdin' => source, 'stdout' => stdout, 'stderr' => stderr, 'timeout' => 5
+          Open4.spawn cmd, 'stdin' => source, 'stdout' => stdout, 'stderr' => stderr, 'timeout' => 5, 'ignore_exit_failure' => true
           result = stderr.blank? ? stdout : stderr
-        rescue Open4::SpawnError
-          result = "pandoc: spawn error\n"
         rescue Timeout::Error
           HoptoadNotifier.notify(ArgumentError.new("timed out with source =\n\n #{source}"))
           result = "Timed out<br/>We've been notified about this."
