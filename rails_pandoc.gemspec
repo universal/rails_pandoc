@@ -15,5 +15,11 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = RailsPandoc::VERSION
 
+  gem.add_runtime_dependency "rails", ">= 3.0.0"
+  gem.add_runtime_dependency "open4", "~> 1.3.0"
+
   gem.add_development_dependency "rspec", "~> 2.9.0"
+  gem.add_development_dependency "guard-rspec"
+  gem.add_development_dependency "guard-bundler"
+  gem.add_development_dependency "rails", ">= 3.0.0"
 end
